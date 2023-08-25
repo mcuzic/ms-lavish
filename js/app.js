@@ -1,3 +1,10 @@
+import {
+  displayProducts,
+  displayButtons,
+  search,
+} from '../utilitis/Display products.js';
+import products from '../utilitis/products.js';
+
 // ********** nav toggle ************
 // select button and links
 const navBtn = document.getElementById('nav-toggle');
@@ -23,17 +30,6 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('fixed');
   }
 });
-
-submit.addEventListener('click', function (e) {
-  {
-    e.preventDefault();
-    setBackToDefault();
-  }
-});
-//function back to default
-function setBackToDefault() {
-  input.value = '';
-}
 
 // ********** smooth scroll ************
 // select links
@@ -68,3 +64,9 @@ scrollLinks.forEach((link) => {
     });
   });
 });
+
+// products
+
+displayProducts(products);
+displayButtons(products);
+search(products);

@@ -770,3 +770,150 @@ contact-page
   border-top-right-radius: var(--borderRadius);
   border-bottom-right-radius: var(--borderRadius);
 }
+/*
+///////////////////////
+shop-page
+//////////////////////
+*/
+.shop {
+  margin: 2rem 0;
+  display: grid;
+  gap: 2rem;
+}
+.shop-container {
+  display: grid;
+  gap: 3rem;
+}
+.image-shop-container {
+  height: 20rem;
+}
+.shop-img {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--borderRadius);
+  object-fit: cover;
+}
+
+.shop-info {
+  text-align: center;
+}
+.shop-product {
+}
+.title,
+.price {
+  margin-top: 0rem;
+  color: var(--black);
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-weight: 300;
+}
+.input-form {
+  margin-bottom: 1rem;
+}
+.search-input {
+  width: 30%;
+  border: none;
+  padding: 0.5rem;
+  background: var(--green-light);
+  border-radius: var(--borderRadius);
+}
+.filter-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+  font-weight: 700;
+}
+
+.filter-btn {
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 0.5rem;
+  background: none;
+  letter-spacing: var(--letterSpacing);
+  transition: var(--transition);
+  font-size: 0.85rem;
+}
+@media screen and (max-width: 868px) {
+  .shop-container {
+    justify-content: center;
+  }
+
+  .shop-product {
+    max-width: 20rem;
+  }
+}
+@media screen and (min-width: 868px) {
+  .search-input {
+    width: 70%;
+  }
+  .shop {
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+  }
+
+  .shop-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+/*addtional css*/
+.hero-shop {
+  min-height: calc(100vh - 192px - 230px);
+  display: grid;
+  place-items: center;
+}
+.no-product {
+  text-align: center;
+}
+/*
+///////////////////////
+single-product-page
+//////////////////////
+*/
+
+.single-product-img {
+  height: 100%;
+  border-radius: var(--borderRadius);
+}
+.single-price {
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.single-product-title,
+.single-product-brand {
+  margin-bottom: 0.2rem;
+}
+.single-product-container {
+  display: grid;
+}
+.enquiry-info {
+  text-align: center;
+}
+
+@media screen and (min-width: 650px) {
+  .single-product-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+  }
+  .single-img-container {
+    height: 30rem;
+  }
+}
+@media screen and (min-width: 960px) {
+  .single-product-container {
+    gap: 0rem;
+  }
+  .single-product-container {
+    justify-items: center;
+  }
+}
