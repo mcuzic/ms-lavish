@@ -1,4 +1,4 @@
-import getElement from '../utilitis/Get Element.js';
+import getElement from './Get Element.js';
 const shopContainer = getElement('.shop-container');
 const shopImg = getElement('.shop-img');
 const price = getElement('.price');
@@ -8,6 +8,7 @@ const form = getElement('.input-form');
 
 //displayProducts
 const displayProducts = (array) => {
+  shopContainer.style.display = 'grid';
   if (array.length < 4) {
     shopContainer.classList.add('hero-shop');
   }
@@ -17,9 +18,6 @@ const displayProducts = (array) => {
     shopContainer.innerHTML =
       '<h3 class="no-product">Sorry, no products matched your search</h3>';
     return;
-  } else {
-    shopContainer.classList.remove('hero-shop');
-    shopContainer.style.display = 'grid';
   }
   shopContainer.innerHTML = array
     .map((product) => {
@@ -52,6 +50,10 @@ const displayButtons = (array) => {
   const filterBtn = filterButtons.querySelectorAll('.filter-btn');
   filterBtn.forEach((btn) => {
     btn.addEventListener('click', function (e) {
+      if (shopContainer.classList.contains('hero-shop')) {
+        shopContainer.classList.remove('hero-shop');
+        shopContainer.style.display = 'grid';
+      }
       const category = e.currentTarget.dataset.id;
       const MenuCategory = array.filter((item) => {
         if (category === item.product) {
