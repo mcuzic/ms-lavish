@@ -821,7 +821,7 @@ shop-page
   margin-bottom: 1rem;
 }
 .search-input {
-  width: 30%;
+  width: 40%;
   border: none;
   padding: 0.5rem;
   background: var(--green-light);

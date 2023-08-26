@@ -41,7 +41,7 @@ const displayButtons = (array) => {
     return buttons.product;
   });
   const newBtns = ['all', ...new Set(newButtons)];
-  console.log(newBtns);
+
   filterButtons.innerHTML = newBtns
     .map((btn) => {
       return `<button class="filter-btn" data-id="${btn}">${btn}</button>`;
