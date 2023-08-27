@@ -123,7 +123,7 @@ const products = [
     id: 'product16',
     title: 'Flowers',
     product: 'Spring Wreath',
-    image: './img/spring 7.jpg',
+    image: './img/spring 8.jpg',
     price: '40',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
   },

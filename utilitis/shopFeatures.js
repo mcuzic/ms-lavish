@@ -73,8 +73,9 @@ const displayButtons = (array) => {
 //search
 
 const search = (array) => {
-  form.addEventListener('input', () => {
+  form.addEventListener('keyup', () => {
     const inputValue = searchInput.value;
+    console.log(inputValue);
     const filterProducts = array.filter((product) => {
       return product.title.toLowerCase().includes(inputValue);
     });
