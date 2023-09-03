@@ -1,10 +1,11 @@
 import getElement from './Get Element.js';
 const shopContainer = getElement('.shop-container');
 const shopImg = getElement('.shop-img');
-const price = getElement('.price');
+const prices = getElement('.price');
 const filterButtons = getElement('.filter-buttons');
 const searchInput = getElement('.search-input');
 const form = getElement('.input-form');
+const featurePrice = getElement('.featured-price');
 
 //displayProducts
 const displayProducts = (array) => {
@@ -21,14 +22,24 @@ const displayProducts = (array) => {
   }
   shopContainer.innerHTML = array
     .map((product) => {
-      const { id, image, price, title } = product;
+      const { id, image, price, title, featured, featuredPrice } = product;
+      let displayedPrice = price;
+      let prices = 'price';
+      let featurePrice = 'featured-price ';
+      if (featured) {
+        displayedPrice = featuredPrice;
+        prices = 'price price-strike';
+      } else {
+        featurePrice = 'featured-price feature-none';
+      }
       return `  <a href="product.html?id=${id}" class="shop-product">
             <div class="image-shop-container">
               <img src="${image}" class="shop-img" />
             </div>
             <div class="shop-info">
               <p class="title">${title}</p>
-              <p class="price">$${price}</p>
+              <p class="${prices}">$${price}</p>  
+              <p class="${featurePrice}">$${displayedPrice}</p>                                     
             </div>
           </a>`;
     })

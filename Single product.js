@@ -2,7 +2,6 @@ import products from './utilitis/products.js';
 import getElement from './utilitis/Get Element.js';
 
 const singleContainer = getElement('.single-product-container');
-console.log(singleContainer);
 const singleImg = getElement('.single-product-img');
 const singleTitle = getElement('.single-product-title');
 const singleBrand = getElement('.single-product-brand');
@@ -19,9 +18,12 @@ const filteredProducts = products.filter((product) => {
 });
 
 const displayProduct = (array) => {
-  const { id, image, price, product, text, title } = array[0];
-  console.log(image);
-  console.log(id);
+  const { id, image, price, product, text, title, featuredPrice, featured } =
+    array[0];
+  let displayPrice = price;
+  if (featured) {
+    displayPrice = featuredPrice;
+  }
   singleContainer.innerHTML = `<div class="single-img-container">
           <img
             src="${image}"
@@ -32,7 +34,7 @@ const displayProduct = (array) => {
         <div class="single-product-info">
           <h3 class="single-product-title">${title}</h3>
           <h4 class="single-product-brand">${product}</h4>
-          <p class="single-price">$${price}</p>
+          <p class="single-price">$${featuredPrice}</p>
           <p class="single-product-text">
            ${text}
           </p>

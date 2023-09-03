@@ -3,9 +3,11 @@ const products = [
     id: 'product1',
     title: 'Elephants',
     product: 'tote-bag',
+    featuredPrice: '40',
     image: './img/elephants.PNG',
     price: '60',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product2',
@@ -13,7 +15,9 @@ const products = [
     product: 'tote-bag',
     image: './img/frida + boja.JPG',
     price: '80',
+    featuredPrice: '60',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product3',
@@ -21,7 +25,9 @@ const products = [
     product: 'tote-bag',
     image: './img/karlovac.jpg',
     price: '80',
+    featuredPrice: '60',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product4',
@@ -29,7 +35,9 @@ const products = [
     product: 'tote-bag',
     image: './img/komisan.JPG',
     price: '80',
-    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featuredPrice: '60',
+    text: `'m baby cold-pressed sustainable glossier master cleanse meditation, quinoa tbh tattooed humblebrag distillery hexagon. Live-edge taxidermy selvage dreamcatcher small batch, hot chicken mustache heirloom farm-to-table taiyaki poutine. Fit locavore gluten-free salvia hot chicken chillwave coloring book, selfies prism pug kinfolk. Williamsburg ascot lomo same, YOLO farm-to-table air plant narwhal flexitarian. `,
+    featured: false,
   },
   {
     id: 'product5',
@@ -37,7 +45,9 @@ const products = [
     product: 'tote-bag',
     image: './img/summer edition.JPG',
     price: '80',
+    featuredPrice: '60',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: true,
   },
   {
     id: 'product6',
@@ -45,7 +55,9 @@ const products = [
     product: 'tote-bag',
     image: './img/tužna sova.jpg',
     price: '80',
+    featuredPrice: '60',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: true,
   },
   {
     id: 'product7',
@@ -53,7 +65,9 @@ const products = [
     product: 'tote-bag',
     image: './img/ruže + boje.jpg',
     price: '80',
+    featuredPrice: '60',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: true,
   },
   {
     id: 'product8',
@@ -61,7 +75,9 @@ const products = [
     product: 'painting',
     image: './img/ruže + boje.jpg',
     price: '80',
+    featuredPrice: '60',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product9',
@@ -69,7 +85,9 @@ const products = [
     product: 'tote-bag',
     image: './img/ZG.jpg',
     price: '80',
+    featuredPrice: '60',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product10',
@@ -77,7 +95,9 @@ const products = [
     product: 'tote-bag',
     image: './img/u cviću.jpg',
     price: '80',
+    featuredPrice: '60',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product11',
@@ -85,7 +105,9 @@ const products = [
     product: 'tote-bag',
     image: './img/slikice.jpg',
     price: '40',
+    featuredPrice: '20',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product12',
@@ -93,7 +115,9 @@ const products = [
     product: 'tote-bag',
     image: './img/slikice.jpg',
     price: '40',
+    featuredPrice: '20',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product13',
@@ -101,7 +125,9 @@ const products = [
     product: 'Spring Wreath',
     image: './img/slikice.jpg',
     price: '40',
+    featuredPrice: '20',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product14',
@@ -109,7 +135,9 @@ const products = [
     product: 'Spring Wreath',
     image: './img/spring wreath 2.jpg',
     price: '40',
+    featuredPrice: '20',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product15',
@@ -117,7 +145,9 @@ const products = [
     product: 'Spring Wreath',
     image: './img/spring wreath 3.jpg',
     price: '40',
+    featuredPrice: '20',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product16',
@@ -125,7 +155,9 @@ const products = [
     product: 'Spring Wreath',
     image: './img/spring 8.jpg',
     price: '40',
+    featuredPrice: '20',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product17',
@@ -133,7 +165,9 @@ const products = [
     product: 'Spring Wreath',
     image: './img/spring 8.jpg',
     price: '40',
+    featuredPrice: '20',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
   {
     id: 'product18',
@@ -141,7 +175,9 @@ const products = [
     product: 'Spring Wreath',
     image: './img/christmas wreath.jpg ',
     price: '40',
+    featuredPrice: '20',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
+    featured: false,
   },
 ];
 
