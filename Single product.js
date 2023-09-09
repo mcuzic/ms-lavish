@@ -34,7 +34,7 @@ const displayProduct = (array) => {
         <div class="single-product-info">
           <h3 class="single-product-title">${title}</h3>
           <h4 class="single-product-brand">${product}</h4>
-          <p class="single-price">$${featuredPrice}</p>
+          <p class="single-price">$${displayPrice}</p>
           <p class="single-product-text">
            ${text}
           </p>

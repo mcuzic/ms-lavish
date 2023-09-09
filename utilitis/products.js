@@ -17,7 +17,7 @@ const products = [
     price: '80',
     featuredPrice: '60',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
-    featured: false,
+    featured: true,
   },
   {
     id: 'product3',
@@ -47,7 +47,7 @@ const products = [
     price: '80',
     featuredPrice: '60',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
-    featured: true,
+    featured: false,
   },
   {
     id: 'product6',

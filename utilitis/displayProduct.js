@@ -5,6 +5,7 @@ const featureCenter = getElement('.feature-product-center');
 const featuredImg = getElement('.f-image');
 const countdownText = getElement('.countdown-product-text');
 const btnContainer = getElement('.products-sale');
+const featureImg = getElement('.feature-product-img');
 
 const displayProduct = (array) => {
   const filterFeatured = array.filter((product) => {
@@ -13,7 +14,9 @@ const displayProduct = (array) => {
     }
   });
 
-  featuredImg.src = filterFeatured[0].image;
+  featureImg.innerHTML = ` <a href="product.html?id=${filterFeatured[0].id}" class="feature-product-img">
+        <img src="${filterFeatured[0].image}" class ="f-image">
+      </a>`;
   countdownText.textContent = filterFeatured[0].text;
   btnContainer.innerHTML = filterFeatured
     .map((item, index) => {
@@ -32,15 +35,20 @@ const displayProduct = (array) => {
     })
     .join('');
 
+  //add id to image
+
   const btns = btnContainer.querySelectorAll('.featured-product-title');
   const saleLines = btnContainer.querySelectorAll('.sale-line');
+
+  // add id to image
+
   //add eventListner for button and sale-line
   btns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       saleLines.forEach((saleLine) => {
         saleLine.classList.remove('active');
       });
-      const sLine = e.currentTarget.nextElementSibling;
+      const sLine = e.currentTarget;
       const index = e.currentTarget.dataset.index;
       sLine.classList.add('active');
       const newProduct = filterFeatured.filter((product) => {
@@ -48,7 +56,9 @@ const displayProduct = (array) => {
           return product;
         }
       });
-      featuredImg.src = newProduct[0].image;
+      featureImg.innerHTML = `<a href="product.html?id=${newProduct[0].id}" class="feature-product-img">
+        <img src="${newProduct[0].image}" class ="f-image">
+      </a>`;
       countdownText.textContent = newProduct[0].text;
     });
   });
