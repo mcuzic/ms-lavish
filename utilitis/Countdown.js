@@ -3,8 +3,6 @@ import getElement from './Get Element.js';
 const countdownTitle = getElement('.countdown-title');
 const numbers = document.querySelectorAll('.deadline-format h4');
 const deadline = document.querySelector('.deadline');
-console.log(deadline);
-
 const months = [
   'January',
   'February',

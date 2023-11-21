@@ -1,5 +1,6 @@
 import products from '../utilitis/products.js';
 import { navigation } from '../utilitis/shared.js';
+import { submenu } from '../utilitis/shared.js';
 
 import {
   displayProducts,
@@ -13,3 +14,4 @@ displayProducts(products);
 displayButtons(products);
 search(products);
 navigation();
+submenu();

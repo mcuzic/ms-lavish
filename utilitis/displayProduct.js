@@ -14,6 +14,7 @@ const displayProduct = (array) => {
     }
   });
 
+  //add id to image
   featureImg.innerHTML = ` <a href="product.html?id=${filterFeatured[0].id}" class="feature-product-img">
         <img src="${filterFeatured[0].image}" class ="f-image">
       </a>`;
@@ -35,12 +36,8 @@ const displayProduct = (array) => {
     })
     .join('');
 
-  //add id to image
-
   const btns = btnContainer.querySelectorAll('.featured-product-title');
   const saleLines = btnContainer.querySelectorAll('.sale-line');
-
-  // add id to image
 
   //add eventListner for button and sale-line
   btns.forEach((btn) => {
@@ -48,7 +45,7 @@ const displayProduct = (array) => {
       saleLines.forEach((saleLine) => {
         saleLine.classList.remove('active');
       });
-      const sLine = e.currentTarget;
+      const sLine = e.currentTarget.nextElementSibling;
       const index = e.currentTarget.dataset.index;
       sLine.classList.add('active');
       const newProduct = filterFeatured.filter((product) => {

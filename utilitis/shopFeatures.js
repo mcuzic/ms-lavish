@@ -1,4 +1,5 @@
 import getElement from './Get Element.js';
+import products from './products.js';
 const shopContainer = getElement('.shop-container');
 const shopImg = getElement('.shop-img');
 const prices = getElement('.price');
@@ -38,8 +39,8 @@ const displayProducts = (array) => {
             </div>
             <div class="shop-info">
               <p class="title">${title}</p>
-              <p class="${prices}">$${price}</p>  
-              <p class="${featurePrice}">$${displayedPrice}</p>                                     
+              <p class="${prices}">€ ${price}</p>  
+              <p class="${featurePrice}">€${displayedPrice}</p>                                     
             </div>
           </a>`;
     })

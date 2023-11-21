@@ -1,0 +1,4 @@
+FAQ - funkcija
+ - funkcija koja će uzeti parametre
+ - uzet e.current target prebacit sve sLine
+ - 

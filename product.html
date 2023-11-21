@@ -35,7 +35,7 @@
           <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="products.html">Products</a></li>
+            <li><a href="index.html#products">Products</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="shop.html">Shop</a></li>
@@ -84,10 +84,68 @@
             odio voluptatem iusto maxime temporibus!
           </p>
           <div class="enquiry-info">
-            <button class="btn enquiry">Send enquiry</button>
+            <button class="btn enquiry" >Send enquiry</button>
           </div>
         </div>
       </div>
+    </section>
+    <div class="new-form">
+      <form class="form">
+        <div class="form-info">
+          <div class="form-close">
+          <h3>order</h3>
+            <button class="close-btn-form"><i class="fas fa-times"></i></button>
+            </div>
+        <p>
+         Please complete the form so that we can receive and process your order.
+        </p>
+        </div>
+        <div class="field-one">
+          <label for="name">Name:</label>
+          <input class="field name" type="text"  value="" id="name" name="name" aria-required="true" placeholder="your name*">
+        </div>
+        <div class="field-two">
+          <label for="e-mail">E-mail:</label>
+          <input class="field email" type="text"  value="" id="email" name="email" aria-required="true" placeholder="your email*">
+        </div>
+        <div class="field-three">
+          <label for="product">Product:</label>
+          <input class="field product-field" type="text"  value="product" id="product" name="product" aria-required="true" placeholder="product*">
+        </div>
+        <div class="field-four">
+          <div class="info-message">
+          <p>Message:</p>
+         <textarea class="field" name="message"  value="" id="message" placeholder="I am interested in buying this product" cols="24" rows="10"></textarea>
+          </div>
+          <div class="product-message-img">
+            <img src="./img/komisan.JPG" class="message-img">
+          </div>
+        </div>
+        <button class="btn form-btn" type="submit">Send</button>
+      </form>
+    </div>
+ <section class="section footer">
+      <footer class="footer-container">
+          <ul class="footer-social">
+            <li>
+              <a
+                href="https://m.facebook.com/profile.php?id=100064154050570&ref=py_c&_rdr#_=_"
+                target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/ms._lavish/?igshid=ZGUzMzM3NWJiOQ%3D%3D"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+               <p class="reserved">&copy; MĆ <span id ="date"></span></p>
+          </div>
+        </div>
+      </footer>
     </section>
     <script type="module" src="Single product.js"></script>
   </body>
