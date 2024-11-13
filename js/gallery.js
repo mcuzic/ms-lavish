@@ -1,6 +1,8 @@
 import { navigation } from '../utilitis/shared.js';
 import getElement from '../utilitis/Get Element.js';
 import photos from '../utilitis/galleryPhotos.js';
+import { pagination } from '../utilitis/shared.js';
+import { btnsPag } from '../utilitis/shared.js';
 navigation();
 
 const section = getElement('.section-center-gallery');
@@ -8,27 +10,15 @@ const btnContainer = getElement('.btn-container');
 
 const unique = [...new Set(photos.map((photo) => photo.product))];
 
-const itemsPerPage = 15;
-const numberOfPages = Math.ceil(photos.length / itemsPerPage);
-const newImages = Array.from({ length: numberOfPages }, (_, index) => {
-  const start = index * itemsPerPage;
-  return photos.slice(start, start + itemsPerPage);
-});
+//paginataion
 
-btnContainer.innerHTML = newImages
-  .map((_, index) => {
-    let classSelected = 'selected';
-    if (index === 0) {
-      classSelected = 'selected';
-    } else {
-      classSelected = 'null';
-    }
-    return `<button class="btn-pagination ${classSelected}">${
-      index + 1
-    }</button>`;
-  })
-  .join('');
+pagination(photos);
 
+//new and selected btns
+
+btnsPag(pagination(photos), btnContainer);
+
+//section gallery
 const uniqueProduct = (array, index) => {
   const uniqueSection = unique
     .map((uni) => {
@@ -57,7 +47,7 @@ const uniqueProduct = (array, index) => {
   return uniqueSection;
 };
 
-section.innerHTML = uniqueProduct(newImages, 0);
+section.innerHTML = uniqueProduct(pagination(photos), 0, unique);
 
 const btns = document.querySelectorAll('.btn-pagination');
 btns.forEach((btn, index) => {
@@ -66,7 +56,7 @@ btns.forEach((btn, index) => {
       btn.classList.remove('selected');
     });
     btn.classList.add('selected');
-    section.innerHTML = uniqueProduct(newImages, index);
+    section.innerHTML = uniqueProduct(pagination(photos), index);
     initializeGallery();
   });
 });

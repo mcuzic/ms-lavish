@@ -9,7 +9,7 @@ const availableProducts = [
   },
   {
     image: './img/Pic1.jpg',
-    title: 'Small paintings',
+    title: 'Miniature Art',
     text: 'Each picture  embodies a perfect blend of coolness and individuality, making a statement with its unique design..',
     text2:
       ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quidem minus minima harum labore totam iste ullam cum eum natus qui voluptas sed autem aperiam fuga veniam saepe, quia rerum inventore voluptates nesciunt, quibusdam architecto voluptate. Et, id laudantium. Cum eaque numquam laboriosam at. Cupiditate sunt expedita consequatur beatae dolore?',

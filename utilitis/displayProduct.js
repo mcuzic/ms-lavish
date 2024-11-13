@@ -6,19 +6,22 @@ const featuredImg = getElement('.f-image');
 const countdownText = getElement('.countdown-product-text');
 const btnContainer = getElement('.products-sale');
 const featureImg = getElement('.feature-product-img');
+const countdownBtn = getElement('.countdown-btn');
 
 const displayProduct = (array) => {
   const filterFeatured = array.filter((product) => {
-    if (product.featured === true) {
+    console.log(product);
+    if (product.mainPageFeatured === true) {
       return product;
     }
   });
-
   //add id to image
-  featureImg.innerHTML = ` <a href="product.html?id=${filterFeatured[0].id}" class="feature-product-img">
+  featureImg.innerHTML = `<a href="product.html?id=${filterFeatured[0].id}" class="feature-product-img">
         <img src="${filterFeatured[0].image}" class ="f-image">
       </a>`;
   countdownText.textContent = filterFeatured[0].text;
+  countdownBtn.innerHTML = `<a href="product.html?id=${filterFeatured[0].id}">Learn More
+      </a>`;
   btnContainer.innerHTML = filterFeatured
     .map((item, index) => {
       //set active for the first button
@@ -57,6 +60,8 @@ const displayProduct = (array) => {
         <img src="${newProduct[0].image}" class ="f-image">
       </a>`;
       countdownText.textContent = newProduct[0].text;
+      countdownBtn.innerHTML = `<a href="product.html?id=${newProduct[0].id}">Learn More
+      </a>`;
     });
   });
 };

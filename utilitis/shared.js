@@ -49,6 +49,55 @@ const submenu = () => {
   });
 };
 
-export { submenu };
+//note for micanje poruke nakon ispunjenje forme
+const note = (section, formAlert, message) => {
+  setTimeout(() => {
+    section.style.display = 'none';
+    formAlert.classList.remove(message);
+  }, 2000);
+};
 
+//paginataion
+const pagination = (array) => {
+  const itemsPerPage = 15;
+  const numberOfPages = Math.ceil(array.length / itemsPerPage);
+  const newArray = Array.from({ length: numberOfPages }, (_, index) => {
+    const start = itemsPerPage * index;
+    return array.slice(start, start + itemsPerPage);
+  });
+  return newArray;
+};
+
+const btnsPag = (array, container) => {
+  container.innerHTML = array
+    .map((_, index) => {
+      let classSelected = 'selected';
+      if (index === 0) {
+        classSelected = 'selected';
+      } else {
+        classSelected = 'null';
+      }
+      return `<button class="btn-pagination ${classSelected}">${
+        index + 1
+      }</button>`;
+    })
+    .join('');
+};
+
+const btns = document.querySelectorAll('.btn-pagination');
+btns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    btns.forEach((btn) => {
+      btn.classList.remove('selected');
+    });
+    btn.classList.add('selected');
+    section.innerHTML = uniqueProduct(pagination(photos), index);
+    initializeGallery();
+  });
+});
+
+export { note };
+export { submenu };
 export { navigation };
+export { pagination };
+export { btnsPag };

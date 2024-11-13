@@ -1,5 +1,8 @@
 import getElement from './Get Element.js';
 import products from './products.js';
+import { btnsPag } from './shared.js';
+import { pagination } from './shared.js';
+
 const shopContainer = getElement('.shop-container');
 const shopImg = getElement('.shop-img');
 const prices = getElement('.price');
@@ -7,9 +10,42 @@ const filterButtons = getElement('.filter-buttons');
 const searchInput = getElement('.search-input');
 const form = getElement('.input-form');
 const featurePrice = getElement('.featured-price');
+const btnContShop = getElement('.btn-container-shop');
 
-//displayProducts
-const displayProducts = (array) => {
+//pagination
+pagination(products);
+
+//btnPag
+btnsPag(pagination(products), btnContShop);
+
+const displayProducts = (array, index) => {
+  shopContainer.style.display = 'grid';
+  shopContainer.innerHTML = array[index]
+    .map((product) => {
+      const { id, image, price, title, featured, featuredPrice } = product;
+      let displayedPrice = price;
+      let prices = 'price';
+      let featurePrice = 'featured-price ';
+      if (featured) {
+        displayedPrice = featuredPrice;
+        prices = 'price price-strike';
+      } else {
+        featurePrice = 'featured-price feature-none';
+      }
+      return `  <a href="product.html?id=${id}" class="shop-product">
+            <div class="image-shop-container">
+              <img src="${image}" class="shop-img" />
+            </div>
+            <div class="shop-info">
+              <p class="title">${title}</p>
+              <p class="${prices}">€ ${price}</p>  
+              <p class="${featurePrice}">€${displayedPrice}</p>                                     
+            </div>
+          </a>`;
+    })
+    .join('');
+};
+const displayProduct = (array) => {
   shopContainer.style.display = 'grid';
   if (array.length < 4) {
     shopContainer.classList.add('hero-shop');
@@ -47,6 +83,18 @@ const displayProducts = (array) => {
     .join('');
 };
 
+const btns = document.querySelectorAll('.btn-pagination');
+btns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    btns.forEach((btn) => {
+      btn.classList.remove('selected');
+    });
+    btn.classList.add('selected');
+    displayProducts(pagination(products), index);
+  });
+});
+//btns pagination
+
 //displayButtons
 const displayButtons = (array) => {
   const newButtons = array.map((buttons) => {
@@ -73,9 +121,9 @@ const displayButtons = (array) => {
         }
       });
       if (category === 'all') {
-        displayProducts(array);
+        displayProduct(array);
       } else {
-        displayProducts(MenuCategory);
+        displayProduct(MenuCategory);
       }
       searchInput.value = '';
     });
@@ -91,7 +139,7 @@ const search = (array) => {
     const filterProducts = array.filter((product) => {
       return product.title.toLowerCase().includes(inputValue);
     });
-    displayProducts(filterProducts);
+    displayProduct(filterProducts);
   });
 };
 

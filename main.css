@@ -510,6 +510,12 @@ featured-products
   place-items: center;
   text-align: center;
 }
+.countdown-btn {
+  margin-top: 1rem;
+}
+.countdown-btn a {
+  color: white;
+}
 .deadline-format h4 {
   margin: 0;
 }
@@ -564,11 +570,12 @@ gallery
 //////////
 */
 .project-pic {
-  height: 25rem;
   border-radius: var(--borderRadius);
   transition: var(--transition);
   box-shadow: var(--light-shadow);
   cursor: pointer;
+  image-rendering: optimizeQuality;
+  /* height: 400px; */
 }
 .gallery {
   display: grid;
@@ -584,7 +591,8 @@ gallery
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.btn-container {
+.btn-container,
+.btn-container-shop {
   margin-bottom: 2rem;
 }
 /*
@@ -730,10 +738,12 @@ pagination
 ////
 */
 
-.btn-container {
+.btn-container,
+.btn-container-shop {
   text-align: center;
 }
-.btn-pagination {
+.btn-pagination,
+.btn-pagination-shop {
   background: var(--green-light);
   padding: 0.4rem 0.7rem;
   border: 2px var(--primary-300) solid;
@@ -868,7 +878,7 @@ about-page
   min-height: 35vh;
   background: url(.//img/martin-de-arriba-Ro4u_Y86Kx4-unsplash.jpg) center/cover
     no-repeat;
-  background-position: ;
+
   color: var(--grey-100);
 }
 /*
@@ -892,10 +902,6 @@ contact-page
   text-align: center;
   border-color: black;
 }
-.contact-info h3 {
-}
-.contact-info p {
-}
 .contact-subscribe {
   display: flex;
   justify-content: center;
@@ -904,9 +910,6 @@ contact-page
   width: 70%;
 }
 
-.contact-text,
-.submit-contact {
-}
 .submit-contact {
   border-radius: 0;
   border-top-right-radius: var(--borderRadius);
@@ -1094,7 +1097,9 @@ single-product-page
 faq and reviews
 //////////////////////
 */
-
+.faq-link {
+  color: white;
+}
 .slide-review {
   text-align: center;
 }
@@ -1131,10 +1136,10 @@ faq and reviews
   margin-bottom: 0.5rem;
   cursor: pointer;
 }
-.review {
+/* .review {
   background: url('./img/jakob-braun-NpeFMd8FseU-unsplash.jpg') center/cover
     no-repeat;
-}
+} */
 .reviews {
   margin: 0 auto;
   text-align: center;
@@ -1145,27 +1150,23 @@ faq and reviews
   font-weight: 700;
   text-align: center;
   margin-bottom: 5rem;
-  color: white;
 }
 .title-info {
   margin-bottom: 3rem;
 }
 .review-name {
   margin: 0;
-  color: white;
 }
 
 .review-product-title {
   margin: 0 auto;
   padding: 0;
   text-align: center;
-  color: white;
 }
 .slide-container {
   position: relative;
   display: flex;
   height: 450px;
-
   margin: 0 auto;
   overflow: hidden;
 }
@@ -1174,8 +1175,6 @@ faq and reviews
   margin: 0;
   text-align: center;
   margin: 0 auto;
-  color: white;
-  font-weight: 700;
 }
 
 .quote {
@@ -1373,8 +1372,8 @@ faq and reviews
 }
 .product-image {
   border-radius: var(--borderRadius);
-  height: 30rem;
-  max-width: 25rem;
+  max-height: 700px;
+  max-width: 700px;
 }
 .available-product-info {
   display: flex;
@@ -1439,7 +1438,6 @@ faq and reviews
   height: 100%;
   display: none;
   background: url('./img/boje.JPG');
-
   z-index: 999;
 }
 .form {
@@ -1469,6 +1467,26 @@ faq and reviews
   color: red;
   font-size: 1.6rem;
   cursor: pointer;
+}
+.thank-you,
+.contact-thank-you {
+  display: none;
+  background: white;
+  padding: 0.2rem;
+  margin-top: 0.2rem;
+  border: 2px var(--green-dark) solid;
+}
+.contact-thank-you {
+  margin-top: 1rem;
+  background: var(--green-light);
+  border: 2px var(--green-light) solid;
+  border-radius: var(--borderRadius);
+}
+.thank-you,
+.contact-thank-you p {
+  font-size: 1rem;
+  text-align: center;
+  color: black;
 }
 @media screen and (max-width: 750px) {
   .new-form {

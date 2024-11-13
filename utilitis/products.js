@@ -8,6 +8,7 @@ const products = [
     price: '40',
     text: `Discover the profound beauty of nature's love through our 'Elephants in Love' linen bag. These majestic creatures, leaning head to each other, symbolize a deep connection and an unspoken promise. The accompanying quote, 'You make me safe, I'll keep you wild,' resonates with the harmony of love and protection that exists in the natural world. Carry this bag as a reminder of the powerful bond between beings and the importance of preserving the wild, a sentiment that adds even more meaning to your daily adventures."`,
     featured: false,
+    mainPageFeatured: false,
   },
   {
     id: 'product2',
@@ -18,6 +19,7 @@ const products = [
     featuredPrice: '40',
     text: `Introducing our unique Frida Kahlo-inspired linen bag, a tribute to the iconic Mexican artist known for her vibrant spirit and remarkable artwork. This bag not only showcases the timeless beauty of linen fabric but also pays homage to Frida's legacy of self-expression and creativity. Carry a piece of artistry with you as you embrace the charm and grace of this linen bag, designed to celebrate individuality and the enduring allure of Frida Kahlo's work.`,
     featured: true,
+    mainPageFeatured: false,
   },
   {
     id: 'product3',
@@ -28,6 +30,7 @@ const products = [
     featuredPrice: '40',
     text: `This linen bag is a heartfelt tribute to a special someone, celebrating the essence of their life's journey. We've incorporated three cherished symbols: Karlovac's old town, their hometown, represents the roots and memories that shape us. White wine, a symbol of joy and celebration, mirrors the moments we toast to life's successes. And dark chocolate, the embodiment of indulgence, is a reminder to savor every sweet moment. Together, these elements create a thoughtful and personalized gift, designed to carry the warmth of love and the richness of experiences wherever they go`,
     featured: true,
+    mainPageFeatured: true,
   },
   {
     id: 'product4',
@@ -38,6 +41,7 @@ const products = [
     featuredPrice: '40',
     text: `Delight in the world of Komi San with our special linen bag, designed as a unique birthday present. Komi San, a beloved character from the Japanese manga series by Tomohito Oda, embodies the spirit of connection and communication. Just as Komi San navigates her world with grace and humor, this bag represents the art of expression and the beauty of friendship. It's a thoughtful and meaningful gift that encapsulates the joy of shared moments and the magic of storytelling, perfect for honoring a special day.`,
     featured: false,
+    mainPageFeatured: false,
   },
   {
     id: 'product5',
@@ -48,6 +52,7 @@ const products = [
     featuredPrice: '40',
     text: `Introducing our 'Summer Edition' linen bag, a delightful tribute to the carefree moments of a girl on vacation. Picture this: a tranquil beach, your favorite drink in hand, and the rhythmic dance of waves along the shore. This bag encapsulates the essence of summer, capturing the joy of relaxation and the serenity of the sea. With each glance, it's an invitation to savor the simple pleasures of life and carry a piece of the summer wherever your journey takes you.`,
     featured: false,
+    mainPageFeatured: false,
   },
   {
     id: 'product6',
@@ -58,6 +63,7 @@ const products = [
     featuredPrice: '40',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
     featured: false,
+    mainPageFeatured: false,
   },
   {
     id: 'product7',
@@ -68,6 +74,7 @@ const products = [
     featuredPrice: '40',
     text: `Step into a world of timeless beauty with our Magnolia Tree linen bag. Inspired by the elegance of these majestic blooms, this bag embodies the grace and sophistication that define magnolia trees. With delicate petals and a rich history, magnolias have long been a symbol of purity and perseverance. Carry this bag as a reminder of the enduring allure of nature's wonders and the quiet strength that resides within`,
     featured: true,
+    mainPageFeatured: true,
   },
   {
     id: 'product8',
@@ -78,6 +85,7 @@ const products = [
     featuredPrice: '40',
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptatibus quibusdam inventore pariatur vel odit adipisci quisquam! Voluptates maxime modi mollitia ut, a iste vitae itaque,excepturi nemo rem et quo ex veritatis explicabo! Repellat aassumenda laboriosam incidunt animi! Ea alias nam ab enim delenitiodio voluptatem iusto maxime temporibus!`,
     featured: false,
+    mainPageFeatured: false,
   },
   {
     id: 'product9',
@@ -88,6 +96,7 @@ const products = [
     featuredPrice: '40',
     text: `Whoever is coming to Zagreb needs to explore the vibrant energy of Dolac Market. Our linen bag captures the essence of this beloved landmark in the heart of our hometown, Zagreb. Just as Dolac Market is a bustling hub of activity and culture, our bag is designed to mirror its lively spirit. Take a piece of Zagreb's soul with you as you carry this bag, a reminder of the authentic experiences and rich traditions that make our city truly special`,
     featured: false,
+    mainPageFeatured: false,
   },
   {
     id: 'product10',
@@ -98,6 +107,7 @@ const products = [
     featuredPrice: '40',
     text: `Embrace the radiance of nature with our 'Girl in the Field of Sunflowers' linen bag. This enchanting scene captures the essence of joy and vitality as a young girl immerses herself in a sea of golden blooms. Sunflowers, with their vibrant petals, represent the brilliance of life and the promise of sunny days. With this bag, you carry the spirit of sunshine, adventure, and the beauty of the great outdoors, wherever your journey may lead`,
     featured: false,
+    mainPageFeatured: false,
   },
 
   {
@@ -109,6 +119,7 @@ const products = [
     featuredPrice: '20',
     text: `Discover the versatility and charm of our handmade wreaths, designed to elevate your home decor. Whether you choose to adorn your door, enhance your table setting, create a cozy ambiance in the living room or kitchen, or extend a warm welcome to your guests, our wreaths are the perfect choice. As the holiday season approaches, consider our Advent Wreaths, a timeless tradition that adds a touch of festive magic to your home. Embrace the spirit of the season with our thoughtfully crafted wreaths, ready to adorn your space with beauty and warmth`,
     featured: false,
+    mainPageFeatured: false,
   },
   {
     id: 'product14',
@@ -119,6 +130,7 @@ const products = [
     featuredPrice: '20',
     text: `Discover the versatility and charm of our handmade wreaths, designed to elevate your home decor. Whether you choose to adorn your door, enhance your table setting, create a cozy ambiance in the living room or kitchen, or extend a warm welcome to your guests, our wreaths are the perfect choice. As the holiday season approaches, consider our Advent Wreaths, a timeless tradition that adds a touch of festive magic to your home. Embrace the spirit of the season with our thoughtfully crafted wreaths, ready to adorn your space with beauty and warmth`,
     featured: true,
+    mainPageFeatured: true,
   },
   {
     id: 'product15',
@@ -129,6 +141,7 @@ const products = [
     featuredPrice: '20',
     text: `Discover the versatility and charm of our handmade wreaths, designed to elevate your home decor. Whether you choose to adorn your door, enhance your table setting, create a cozy ambiance in the living room or kitchen, or extend a warm welcome to your guests, our wreaths are the perfect choice. As the holiday season approaches, consider our Advent Wreaths, a timeless tradition that adds a touch of festive magic to your home. Embrace the spirit of the season with our thoughtfully crafted wreaths, ready to adorn your space with beauty and warmth`,
     featured: false,
+    mainPageFeatured: false,
   },
   {
     id: 'product16',
@@ -139,6 +152,7 @@ const products = [
     featuredPrice: '20',
     text: `Discover the versatility and charm of our handmade wreaths, designed to elevate your home decor. Whether you choose to adorn your door, enhance your table setting, create a cozy ambiance in the living room or kitchen, or extend a warm welcome to your guests, our wreaths are the perfect choice. As the holiday season approaches, consider our Advent Wreaths, a timeless tradition that adds a touch of festive magic to your home. Embrace the spirit of the season with our thoughtfully crafted wreaths, ready to adorn your space with beauty and warmth`,
     featured: false,
+    mainPageFeatured: false,
   },
   {
     id: 'product17',
@@ -149,6 +163,7 @@ const products = [
     featuredPrice: '20',
     text: `Discover the versatility and charm of our handmade wreaths, designed to elevate your home decor. Whether you choose to adorn your door, enhance your table setting, create a cozy ambiance in the living room or kitchen, or extend a warm welcome to your guests, our wreaths are the perfect choice. As the holiday season approaches, consider our Advent Wreaths, a timeless tradition that adds a touch of festive magic to your home. Embrace the spirit of the season with our thoughtfully crafted wreaths, ready to adorn your space with beauty and warmth`,
     featured: false,
+    mainPageFeatured: false,
   },
   {
     id: 'product18',
@@ -159,6 +174,7 @@ const products = [
     featuredPrice: '40',
     text: `Discover the versatility and charm of our handmade wreaths, designed to elevate your home decor. Whether you choose to adorn your door, enhance your table setting, create a cozy ambiance in the living room or kitchen, or extend a warm welcome to your guests, our wreaths are the perfect choice. As the holiday season approaches, consider our Advent Wreaths, a timeless tradition that adds a touch of festive magic to your home. Embrace the spirit of the season with our thoughtfully crafted wreaths, ready to adorn your space with beauty and warmth`,
     featured: false,
+    mainPageFeatured: false,
   },
   {
     id: 'product19',
@@ -169,6 +185,7 @@ const products = [
     featuredPrice: '40',
     text: `Discover the versatility and charm of our handmade wreaths, designed to elevate your home decor. Whether you choose to adorn your door, enhance your table setting, create a cozy ambiance in the living room or kitchen, or extend a warm welcome to your guests, our wreaths are the perfect choice. As the holiday season approaches, consider our Advent Wreaths, a timeless tradition that adds a touch of festive magic to your home. Embrace the spirit of the season with our thoughtfully crafted wreaths, ready to adorn your space with beauty and warmth`,
     featured: false,
+    mainPageFeatured: false,
   },
   {
     id: 'product20',
@@ -179,6 +196,40 @@ const products = [
     featuredPrice: '40',
     text: `Discover the versatility and charm of our handmade wreaths, designed to elevate your home decor. Whether you choose to adorn your door, enhance your table setting, create a cozy ambiance in the living room or kitchen, or extend a warm welcome to your guests, our wreaths are the perfect choice. As the holiday season approaches, consider our Advent Wreaths, a timeless tradition that adds a touch of festive magic to your home. Embrace the spirit of the season with our thoughtfully crafted wreaths, ready to adorn your space with beauty and warmth`,
     featured: false,
+    mainPageFeatured: false,
+  },
+  {
+    id: 'product22',
+    title: 'Christmas Wreath',
+    product: 'Wreath',
+    image: './img/wreaths/Christmas_wreath_3_1.jpg',
+    price: '80',
+    featuredPrice: '60',
+    text: `Discover the versatility and charm of our handmade wreaths, designed to elevate your home decor. Whether you choose to adorn your door, enhance your table setting, create a cozy ambiance in the living room or kitchen, or extend a warm welcome to your guests, our wreaths are the perfect choice. As the holiday season approaches, consider our Advent Wreaths, a timeless tradition that adds a touch of festive magic to your home. Embrace the spirit of the season with our thoughtfully crafted wreaths, ready to adorn your space with beauty and warmth`,
+    featured: true,
+    mainPageFeatured: true,
+  },
+  {
+    id: 'product23',
+    title: 'Christmas Wreath',
+    product: 'Wreath',
+    image: './img/wreaths/Christmas_wreath_4_1.jpg',
+    price: '80',
+    featuredPrice: '50',
+    text: `Discover the versatility and charm of our handmade wreaths, designed to elevate your home decor. Whether you choose to adorn your door, enhance your table setting, create a cozy ambiance in the living room or kitchen, or extend a warm welcome to your guests, our wreaths are the perfect choice. As the holiday season approaches, consider our Advent Wreaths, a timeless tradition that adds a touch of festive magic to your home. Embrace the spirit of the season with our thoughtfully crafted wreaths, ready to adorn your space with beauty and warmth`,
+    featured: false,
+    mainPageFeatured: false,
+  },
+  {
+    id: 'product27',
+    title: 'Christmas Wreath',
+    product: 'Wreath',
+    image: './img/wreaths/Christmas_wreath_5_1.jpg',
+    price: '80',
+    featuredPrice: '50',
+    text: `Discover the versatility and charm of our handmade wreaths, designed to elevate your home decor. Whether you choose to adorn your door, enhance your table setting, create a cozy ambiance in the living room or kitchen, or extend a warm welcome to your guests, our wreaths are the perfect choice. As the holiday season approaches, consider our Advent Wreaths, a timeless tradition that adds a touch of festive magic to your home. Embrace the spirit of the season with our thoughtfully crafted wreaths, ready to adorn your space with beauty and warmth`,
+    featured: false,
+    mainPageFeatured: false,
   },
 ];
 

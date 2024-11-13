@@ -2,3 +2,5 @@ FAQ - funkcija
  - funkcija koja će uzeti parametre
  - uzet e.current target prebacit sve sLine
  - 
+
+ sredit shop - doati funkciju jer se ponavlja, slike su u problemu isto iz nekog razloga

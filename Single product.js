@@ -1,6 +1,8 @@
 import products from './utilitis/products.js';
 import getElement from './utilitis/Get Element.js';
 import { navigation } from './utilitis/shared.js';
+import { note } from './utilitis/shared.js';
+
 navigation();
 
 const singleContainer = getElement('.single-product-container');
@@ -12,6 +14,7 @@ const singleText = getElement('.single-product-text');
 const newForm = getElement('.new-form');
 const closeBtn = getElement('.close-btn-form');
 const formBtn = getElement('.form-btn');
+const thxNote = document.querySelector('.thank-you');
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
@@ -69,8 +72,7 @@ const formFunction = (array) => {
     const fields = document.querySelectorAll('.field');
     let allFieldsPopulated = true;
     fields.forEach((field, index) => {
-      ariaRequired = field.getAttribute('aria-required');
-      if (field.value === '' && ariaRequired === 'true') {
+      if (field.value === '' && field.hasAttribute('required')) {
         field.style.border = '1px red solid';
         allFieldsPopulated = false;
         return;
@@ -78,7 +80,7 @@ const formFunction = (array) => {
     });
     if (allFieldsPopulated) {
       fields.forEach((field) => {
-        ariaRequired = field.getAttribute('aria-required');
+        ariaRequired = field.hasAttribute('required');
         field.value = '';
         if (!ariaRequired) {
           field.style.border = '1px black solid';
@@ -86,7 +88,10 @@ const formFunction = (array) => {
           field.style.border = 'none';
         }
       });
-      newForm.classList.remove('form-display');
+      //Thank you note
+      thxNote.style.display = 'block';
+      //hide message
+      note(thxNote, newForm, 'form-display');
     }
   });
   closeBtn.addEventListener('click', () => {

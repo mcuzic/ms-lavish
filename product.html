@@ -90,7 +90,7 @@
       </div>
     </section>
     <div class="new-form">
-      <form class="form">
+      <form action="" method="POST" class="form">
         <div class="form-info">
           <div class="form-close">
           <h3>order</h3>
@@ -102,15 +102,15 @@
         </div>
         <div class="field-one">
           <label for="name">Name:</label>
-          <input class="field name" type="text"  value="" id="name" name="name" aria-required="true" placeholder="your name*">
+          <input class="field name" type="text"  value="" id="name" name="name" required placeholder="your name*">
         </div>
         <div class="field-two">
           <label for="e-mail">E-mail:</label>
-          <input class="field email" type="text"  value="" id="email" name="email" aria-required="true" placeholder="your email*">
+          <input class="field email" type="text"  value="" id="email" name="e-mail" required placeholder="your email*">
         </div>
         <div class="field-three">
           <label for="product">Product:</label>
-          <input class="field product-field" type="text"  value="product" id="product" name="product" aria-required="true" placeholder="product*">
+          <input class="field product-field" type="text"  value="product" id="product" name="product" required placeholder="product*">
         </div>
         <div class="field-four">
           <div class="info-message">
@@ -122,8 +122,11 @@
           </div>
         </div>
         <button class="btn form-btn" type="submit">Send</button>
-      </form>
+        <div class="thank-you">
+        <p>Thank you for your inquiry.<br> We will get back to you as soon as possible </p>
     </div>
+      </form>
+    </div>    
  <section class="section footer">
       <footer class="footer-container">
           <ul class="footer-social">
@@ -142,6 +145,7 @@
               ></a>
             </li>
           </ul>
+            <a href="faq and reviews.html" class="faq-link">FAQ</a>
                <p class="reserved">&copy; MĆ <span id ="date"></span></p>
           </div>
         </div>
