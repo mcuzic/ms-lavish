@@ -10,7 +10,6 @@ const countdownBtn = getElement('.countdown-btn');
 
 const displayProduct = (array) => {
   const filterFeatured = array.filter((product) => {
-    console.log(product);
     if (product.mainPageFeatured === true) {
       return product;
     }
